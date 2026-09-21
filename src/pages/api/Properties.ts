@@ -204,13 +204,16 @@ export const propertiesData: PropertiesType[] = [
           'description': 'Great for students (preferably women), sea-facing, 50 meters to the beach, 200 meters to Barra Shopping, with plenty of shops, supermarkets, restaurants, snack bars, pharmacies, and several banks. There is a promenade by the beach for exercise and outdoor activities.',
           images: [
             {
-            url: 'https://a0.muscache.com/im/pictures/777e0d41-ec20-4a74-b27b-799f84f01287.jpg?im_w=720',
-            id: 1,
+              url: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80',
+              id: 1,
             },
             {
-            url: 'https://a0.muscache.com/im/pictures/c374e070-f1d2-4c14-a577-fb90db171b85.jpg?im_w=1200',
+              url: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80',
             },
-        ]
+            {
+              url: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80',
+            },
+          ]
         },
         {
           'id': 11,
@@ -311,8 +314,14 @@ export const propertiesData: PropertiesType[] = [
           'description': 'Twin cabin with A Flecha at Cambuim Cabanas, a paradisiacal retreat in the mountains of Serra Catarinense with exclusive waterfalls, making the place excellent to visit even in summer.',
           images: [
             {
-              url: 'https://a0.muscache.com/im/pictures/40588b31-71f1-4b0f-a755-ea3005d246c3.jpg?im_w=1200',
+              url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80',
               id: 1,
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80',
             },
           ]
         },
@@ -351,7 +360,14 @@ export const propertiesData: PropertiesType[] = [
           'description': 'Our chalet has 48 square meters, well thought out and distributed between a complete kitchen, a TV room, a spacious bathroom, and a mezzanine with a hot tub for couples, with a 1.38x1.98 double bed. The mountain view from our inn is incredible and deserves praise. It is one of the best among the inns. We also arrange hot air balloon rides, hikes, horseback riding, quad biking, and more.',
           images: [
             {
-              url: 'https://a0.muscache.com/im/pictures/5558d351-5cfa-4869-bffa-44905a72f0fd.jpg?im_w=1200',
+              url: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80',
+              id: 1,
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+            },
+            {
+              url: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
             },
           ]
         },
