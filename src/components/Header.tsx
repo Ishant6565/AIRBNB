@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 const Hero = '/assets/Airbnb_Logo.jpg'
 import {
     SearchIcon,
@@ -8,6 +8,8 @@ import {
     PlusSmIcon,
     MinusIcon,
     XIcon
+    ,MoonIcon
+    ,SunIcon
 } from '@heroicons/react/solid'
 import { DateRangePicker } from 'react-date-range';
 import { useRouter } from 'next/router';
@@ -23,8 +25,19 @@ export default function Header() {
     const [searchInput, setSearchInput] = useState('');
     const [startDate, SetStartDate] = useState(new Date())
     const [endDate, SetEndDate] = useState(new Date())
+    const [darkMode, setDarkMode] = useState(false)
 
     const router = useRouter()
+
+    useEffect(() => {
+        const savedTheme = window.localStorage.getItem('airbnb-theme')
+        setDarkMode(savedTheme === 'dark')
+    }, [])
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('dark', darkMode)
+        window.localStorage.setItem('airbnb-theme', darkMode ? 'dark' : 'light')
+    }, [darkMode])
 
     function handleSelect  (ranges: { selection: { startDate: React.SetStateAction<Date>; endDate: React.SetStateAction<Date>; }; }) {
         SetStartDate(ranges.selection.startDate)
@@ -37,7 +50,7 @@ export default function Header() {
         key: 'selection'
     }
   return (
-    <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 
+    <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 dark:bg-black 
     // Media querry:
     md:px-10
     '>
@@ -66,7 +79,16 @@ export default function Header() {
             />
         </div>
 
-        <div className="config flex items-center space-x-4 justify-end text-gray-500">
+        <div className="config flex items-center space-x-2 justify-end text-gray-500">
+            <button
+                type="button"
+                onClick={() => setDarkMode((enabled) => !enabled)}
+                className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-gray-200 transition hover:bg-gray-100 dark:border-gray-600 dark:hover:bg-gray-700"
+                aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                title={darkMode ? 'Light mode' : 'Dark mode'}
+            >
+                {darkMode ? <SunIcon className="h-5 w-5 text-yellow-300" /> : <MoonIcon className="h-5 w-5" />}
+            </button>
             <p className='hidden md:inline cursor-pointer'>
                 Become a host
             </p>
